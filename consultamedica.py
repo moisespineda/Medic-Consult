@@ -9,6 +9,10 @@
 # the number of patients consulting for each disease, the total number of patients, the average age 
 # of the patients and the percentage of male and female patients are displayed.
 
+import os
+
+print("Hola \n \n")
+
 covid=0
 ah1n1=0
 common=0
