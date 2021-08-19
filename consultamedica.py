@@ -11,7 +11,7 @@
 
 import os
 
-print("Hola \n \n")
+print("Hola, mi nombre es Moisés\n \n")
 
 covid=0
 ah1n1=0
