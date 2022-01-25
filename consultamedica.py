@@ -1,6 +1,6 @@
 # Programa en donde se pregunta al usuario por el motivo de la consulta entre ah1n1, covid, 
 # gripe comun, sarampion o dengue. Tambien se pregunta por la edad y el sexo del paciente.
-# Al final, se muestra la cantidad de pacientes que consulta paracada enfermedad, la cantidad
+# Al final, se muestra la cantidad de pacientes que consulta para cada enfermedad, la cantidad
 # total de pacientes, el promedio de edad de los pacientes y el porcentaje de pacientes hombres
 # y pacientes mujeres.
 
@@ -61,3 +61,7 @@ print("Cantidad de pacientes: ", persons)
 print("Promedio de edades: ", meanage)
 print("Porcentaje de hombres: ", percm, "%")
 print("Porcentaje de mujeres: ", percw, "%")
+if percm>percw:
+    print("Hay mas hombres que hombres")
+elif percw>percm:
+    print("Hay mas mujeres que mujeres")
