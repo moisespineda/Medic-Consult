@@ -70,7 +70,7 @@ if persons>0:
     print("Porcentaje de hombres: ", percm, "%")
     print("Porcentaje de mujeres: ", percw, "%")
     if percm>percw:
-        print("Hay mas hombres que mujeres")
+        print("Hay mas hombres gitque mujeres")
     elif percw>percm:
         print("Hay mas mujeres que hombres")
 else:
