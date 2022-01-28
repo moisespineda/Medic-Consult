@@ -60,7 +60,6 @@ if persons>0:
 
     print("RESUMEN \n \n")
 
-<<<<<<< HEAD
     print("Cantidad de pacientes con COVID-19: ", covid)
     print("Cantidad de pacientes con AH1N1:", ah1n1)
     print("Cantidad de pacientes con Gripe Común:", common)
@@ -77,24 +76,3 @@ if persons>0:
 else:
     print("RESUMEN \n \n")
     print("No hay datos ingresados")
-=======
-meanage=ages/persons
-percm=(men*100)/persons
-percw=(women*100)/persons
-
-print("RESUMEN \n \n")
-
-print("Cantidad de pacientes con COVID-19: ", covid)
-print("Cantidad de pacientes con AH1N1:", ah1n1)
-print("Cantidad de pacientes con Gripe Común:", common)
-print("Cantidad de pacientes con Sarampion:", measles)
-print("Cantidad de pacientes con Dengue:", dengue)
-print("Cantidad de pacientes: ", persons)
-print("Promedio de edades: ", meanage)
-print("Porcentaje de hombres: ", percm, "%")
-print("Porcentaje de mujeres: ", percw, "%")
-if percm>percw:
-    print("Hay mas hombres que hombres")
-elif percw>percm:
-    print("Hay mas mujeres que mujeres")
->>>>>>> b94d8e436322536d8d99273b1757e417f2162cb8
