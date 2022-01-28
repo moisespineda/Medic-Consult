@@ -1,6 +1,6 @@
 # Programa en donde se pregunta al usuario por el motivo de la consulta entre ah1n1, covid, 
 # gripe comun, sarampion o dengue. Tambien se pregunta por la edad y el sexo del paciente.
-# Al final, se muestra la cantidad de pacientes que consulta paracada enfermedad, la cantidad
+# Al final, se muestra la cantidad de pacientes que consulta para cada enfermedad, la cantidad
 # total de pacientes, el promedio de edad de los pacientes y el porcentaje de pacientes hombres
 # y pacientes mujeres.
 
@@ -22,42 +22,57 @@ persons=0
 ages=0
 men=0
 women=0
-option=(input("Ingrese la razon por cual consulta: \n \n1. Covid-19 \n2. AH1N1 \n3. Gripe Común \n4. Sarampion \n5. Dengue \n \nOpcion: "))
-
-while option=="1" or option=="2" or option=="3" or option=="4" or option=="5":
-    
-    if option=="1":
-        covid=covid+1
-    if option=="2":
-        ah1n1=ah1n1+1
-    if option=="3":
-        common=common+1
-    if option=="4":
-        measles=measles+1
-    if option=="5":
-        dengue=dengue+1
-    sex=input("Ingrese si el paciente es hombre(H) o mujer(M): ").title()
-    if sex=="H":
-        men+=1
-    else:
-        women+=1
-    age=int(input("Ingrese su edad: "))
-    ages+=age
-    persons=persons+1
+act=True
+while act==True:
     option=(input("Ingrese la razon por cual consulta: \n \n1. Covid-19 \n2. AH1N1 \n3. Gripe Común \n4. Sarampion \n5. Dengue \n \nOpcion: "))
 
-meanage=ages/persons
-percm=(men*100)/persons
-percw=(women*100)/persons
+    if option=="1" or option=="2" or option=="3" or option=="4" or option=="5":
+    
+        if option=="1":
+            covid=covid+1
+        if option=="2":
+            ah1n1=ah1n1+1
+        if option=="3":
+            common=common+1
+        if option=="4":
+            measles=measles+1
+        if option=="5":
+            dengue=dengue+1
+        sex=input("Ingrese si el paciente es hombre(H) o mujer(M): ").title()
+        if sex=="H":
+            men+=1
+        elif sex=="M":
+            women+=1
+        age=int(input("Ingrese su edad: "))
+        ages+=age
+        persons=persons+1
+        keep=input("Si desea continuar presione S, sino presione cualquier tecla: ").title()
+        if keep!="S":
+            act=False
+    else:
+        print ("Opcion no valida. Intente de nuevo.")
 
-print("RESUMEN \n \n")
+os.system("cls")
+if persons>0:    
+    mean_age=ages/persons
+    percm=(men*100)/persons
+    percw=(women*100)/persons
 
-print("Cantidad de pacientes con COVID-19: ", covid)
-print("Cantidad de pacientes con AH1N1:", ah1n1)
-print("Cantidad de pacientes con Gripe Común:", common)
-print("Cantidad de pacientes con Sarampion:", measles)
-print("Cantidad de pacientes con Dengue:", dengue)
-print("Cantidad de pacientes: ", persons)
-print("Promedio de edades: ", meanage)
-print("Porcentaje de hombres: ", percm, "%")
-print("Porcentaje de mujeres: ", percw, "%")
+    print("RESUMEN \n \n")
+
+    print("Cantidad de pacientes con COVID-19: ", covid)
+    print("Cantidad de pacientes con AH1N1:", ah1n1)
+    print("Cantidad de pacientes con Gripe Común:", common)
+    print("Cantidad de pacientes con Sarampion:", measles)
+    print("Cantidad de pacientes con Dengue:", dengue)
+    print("Cantidad de pacientes: ", persons)
+    print("Promedio de edades: ", mean_age)
+    print("Porcentaje de hombres: ", percm, "%")
+    print("Porcentaje de mujeres: ", percw, "%")
+    if percm>percw:
+        print("Hay mas hombres que mujeres")
+    elif percw>percm:
+        print("Hay mas mujeres que hombres")
+else:
+    print("RESUMEN \n \n")
+    print("No hay datos ingresados")
