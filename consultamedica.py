@@ -11,7 +11,7 @@
 
 import os
 
-print("Hola, mi nombre es Moisés\n \n")
+print("Hola, Bienvenido al sistema de Consultas Médicas\n \n")
 
 covid=0
 ah1n1=0
